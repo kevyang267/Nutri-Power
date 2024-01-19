@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/animated_styles.css')}}">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/static/styles/benis.png" type="image/x-icon">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <title>Callorie Callabunga</title>
+</head>
+
+<body id="div-1">
+
+  <!-- For Nav Bar-->
+
+  <nav class="navbar fixed-top navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{ url_for('Login') }}"> <img src="/static/styles/login.png" width="50" height="50"> </a>
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-primary me-md-2" type="button">General Tips</button>
+        <!-- <button class="btn btn-primary" type="button">Contact</button> -->
+      </div>
+    </div>
+  </nav>
+  <!-- Nav Bar Ends-->
+
+
+
+  <div class="container sec1" id="top">
+    <div>
+      <h1 class="Welcome">welcome to</h1>
+      <h1 class="Title"> NutriPower</h1>
+      <h1 class="intro-header"> <i>what is your goal?</i></h1>
+    </div>
+
+    <div class="d-grid gap-4 col-6 mx-auto">
+      <br>
+      <button class="btn btn-light" type="button" onclick='window.location="#middle"'>Weight Loss</button>
+      <button class="btn btn-light" type="button" onclick='window.location="#middle"'>Weight Gain</button>
+    </div>
+
+  </div>
+
+  <!-- Page 2-->
+    <div class="container sec2" id="middle">
+        <br><br><br><br><br>
+        <div class="center-button">
+        <button class="btn btn-primary me-md-2" onclick='window.location="#"' type="button">Go Back</button>
+        <!-- Testing to see if this works -->
+        </div>
+        <!--- Form Logic Starts-->
+        <div class="form-body">
+            <div class="row">
+                <div class="form-holder">
+                    <div class="form-content">
+                        <div class="form-items">
+                            <h3>Fill in the data below</h3>
+                            <form class="requires-validation" novalidate action="/data" method = "POST">
+
+                                <div class="col-md-12">
+                                    <input class="form-control" type="number" name="age" placeholder="Age" required>
+                                    <div class="valid-feedback">Age field is valid!</div>
+                                    <div class="invalid-feedback">Age field cannot be blank!</div>
+                                </div>
+
+                                <div class="col-md-12 mt-3">
+                                    <label class="mb-3 mr-1" for="gender">Gender: </label>
+
+                                    <input type="radio" class="btn-check" name="gender" value="male" id="male" autocomplete="off" required>
+                                    <label class="btn btn-sm btn-outline-secondary" for="male">Male</label>
+
+                                    <input type="radio" class="btn-check" name="gender" value="female" id="female" autocomplete="off" required>
+                                    <label class="btn btn-sm btn-outline-secondary" for="female">Female</label>
+
+                                    <input type="radio" class="btn-check" name="gender" value="email" id="secret" autocomplete="off" required>
+                                    <label class="btn btn-sm btn-outline-secondary" for="secret">Secret</label>
+                                    <div class="valid-feedback mv-up">You selected a gender!</div>
+                                    <div class="invalid-feedback mv-up">Please select a gender!</div>
+                                </div>
+ 
+                                <div class="col-md-12 height">
+                                    <input class="form-control" type="number" name="height" placeholder="Height (cm)" required>
+                                    <div class="valid-feedback">Height field is valid!</div>
+                                    <div class="invalid-feedback">Height field cannot be blank!</div>
+                                </div>
+
+                                <div class="col-md-12 weight">
+                                    <input class="form-control" type="number" name="weight" placeholder="Weight (kg)" required>
+                                    <div class="valid-feedback">Weight field is valid!</div>
+                                    <div class="invalid-feedback">Weight field cannot be blank!</div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <select name="exercise" class="form-select mt-3 exercise" required>
+                                        <option selected disabled value="" class="chosen-text">Exercise</option>
+                                        {% for o in data %}
+                                        <option value="{{ o.name }}">{{ o.name }}</option>
+                                        {% endfor %}
+                                    </select>
+
+                                    <div class="valid-feedback">You selected an Exercise Level!</div>
+                                    <div class="invalid-feedback">Please select an Exercise Level!</div>
+                                </div>
+
+                                <div class="form-check checkbox">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                    <label class="form-check-label">I confirm that the data above is correct</label>
+                                    <div class="invalid-feedback">Please confirm that the entered data is correct!</div>
+                                </div>               
+
+                                <div class="form-button mt-3">
+                                    <button id="submit" type="submit" class="btn btn-primary" onclick='window.location="#end"'>Submit</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--- Form Logic Ends-->
+    </div>
+
+
+    <!--Page 3-->
+    <div class="container sec3" id="end">
+
+      <!-- Show arrows pointing up over header -->
+
+      <div class="centered-div">
+        <h1 class="food-header">What are we eating today?</h1>
+        <h4 class="subtitle"> Click the search button to get started!</h4>
+      </div>
+
+      <div class="userItems">
+        <h1 class="user-title">User Info</h1>
+        {% for value in person_data %}
+        <tr>
+             <p class="text-format"> {{ value }} <p>
+        </tr>
+      {% endfor %}
+      </div>
+
+      <div class="currentItems"> 
+        <h1 class="items-header">Current items</h1> 
+        <br>
+        {% for value in selected_items %}
+          <p class="items"> {{ value }} </p>
+        {% endfor %}    
+        
+        <h3 class="calories">Total calories:
+          {% if calories %} 
+          <p> {{ calories }} </p>
+          {% endif %}
+        </h3> 
+      </div>
+
+      <div class="press-enter">
+        <h5>Press enter to find some results!</h5>
+      </div>
+
+
+      <div id="wrap" class="foods">
+
+        <!-- food search -->
+        <form autocomplete="off" novalidate action="/foodData" method = "POST">
+        <input id="search" name="food" type="text" placeholder="What're we looking for ? " onclick='window.location="#end"'>
+        <input id="search_submit" name="food" value="Rechercher" type="submit" onclick='window.location="#end"'>
+        </form>
+
+        <div class="foodList">
+        <!-- {% if form_data|length > 0 %} -->
+
+        <!-- getting new foodsies -->
+          <form autocomplete="on" novalidate action="/toList" method = "POST" class="center-form">
+            <!-- Does not show up -->
+            <tr>
+                <select name="foodItem" class="form-select mt-3 foodItems" required>
+                {% for value in form_data%}
+                <option value="{{ value }}"> {{ value }} </option>
+                {% endfor %}        
+                </select>
+            </tr>
+            <div class="form-button mt-3 left">
+              <button id="submit" type="submit" class="btn btn-primary">Add</button>
+            </div>
+          </form>
+          <!-- {% endif %} -->
+        </div>
+
+      </div>
+
+      <div class="nutrition">
+        <h1 class="nut-header">         Nutrition Info </h1>
+        {% if nutrition_data|length > 0 %}
+        {% for key, value in nutrition_data.items() %}
+        <p class="info" value="{{ value }}"> {{ key }}: {{ value }}</p>
+        {% endfor %}   
+        {% endif %}
+      </div>
+
+    <!-- End of section 3 -->
+    </div>
+
+
+
+    <!--Backgrounds-->
+    <span class="background1"></span>
+    <span class="background2"></span>
+    <span class="background3"></span>
+
+
+</body>
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</html>
+
+
+
+
+        <!--- Script for Form to check if all the fileds were filled-->
+<script>
+    (function () {
+    'use strict'
+    const forms = document.querySelectorAll('.requires-validation')
+    Array.from(forms)
+        .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+            }
+            form.classList.add('was-validated')
+        }, false)
+        })
+    })()
+
+
+</script>
+{% if scrollToAnchor %}
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.location.hash = '#{{ scrollToAnchor }}';
+    });
+</script>
+{% endif %}
+<!--- Script for Form Ends-->

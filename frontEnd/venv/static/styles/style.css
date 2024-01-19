@@ -1,0 +1,451 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+#div-1 {
+  overflow: hidden;
+}
+
+.body {
+  /* overflow-y: hidden; */
+  font-family: "Roboto", sans-serif;
+}
+
+/* Section 1 */
+.sec1 {
+  margin-top: 76px;
+  height: 100vh;
+  width: 100vw;
+  /* background-color: beige; */
+}
+
+.Welcome {
+  margin: auto;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.intro-header {
+  margin: auto;
+  text-align: center;
+  margin-top: 20%;
+}
+
+.btn-light {
+  margin: auto;
+  text-align: center;
+}
+
+.center-button {
+  margin: auto;
+  text-align: center;
+}
+
+.background1 {
+  height: 100vh;
+  width: 100vw;
+  top: 0px;
+  position: absolute;
+  z-index: -5;
+  background-color: cornsilk;
+}
+
+.foodList {
+  margin-top: 100px;
+}
+
+/* Section 2 */
+
+.sec2 {
+  height: 100vh;
+  width: 100vw;
+  /* background-color: rgb(218, 132, 136); */
+}
+
+/* Section 3 */
+.sec3 {
+  top: 200vh;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+
+.items-header {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.subtitile {
+  font-weight: 100;
+  margin-top: 20px;
+  position: relative;
+}
+
+.calories {
+  text-align: center;
+}
+
+.press-enter {
+  bottom: 15px;
+  margin: auto;
+  text-align: center;
+  width: 100vw;
+  position: absolute;
+
+  z-index: -5;
+}
+
+.Title {
+  margin: auto;
+  text-align: center;
+  font-size: 100px;
+}
+
+.userItems {
+  float: left;
+  height: 23vh;
+  width: 25vw;
+  background: white;
+  border-radius: 15px;
+  margin-left: 30px;
+  margin-top: -180px;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.user-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.items {
+  margin-left: 10px;
+}
+
+.left {
+  right: 0px;
+}
+
+.center-form {
+  width: 36vw;
+  margin: auto;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+}
+
+.nutrition {
+  float: right;
+  right: 0px;
+  margin-right: -560px;
+  height: 85vh;
+  margin-top: -175px;
+  width: 25vw;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.info {
+  margin-left: 15px;
+  left: 50px;
+}
+
+.nut-header {
+  /* position: absolute; */
+  left: 50px;
+  /* margin-left: 50px; */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.currentItems {
+  float: left;
+  height: 55vh;
+  width: 25vw;
+  background: white;
+  border-radius: 25px;
+  left: 45px;
+  position: absolute;
+  margin-top: 80px;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.text-format {
+  margin-top: -15px;
+  margin-left: 20px;
+}
+
+.centered-div {
+  width: 100vw;
+  margin: auto;
+  text-align: center;
+}
+
+.pickFood:hover {
+  color: wheat;
+}
+
+.foods {
+  float: right;
+}
+
+.food-header {
+  font-size: 60px;
+  z-index: 10;
+  /* color:red; */
+  margin-top: 150px;
+  margin-bottom: 30px;
+  /* text-align: center; */
+}
+
+.background2 {
+  height: 100vh;
+  width: 100vw;
+  top: 108vh;
+  position: absolute;
+  z-index: -10;
+  background-color: rgb(171, 228, 245);
+}
+
+.background3 {
+  height: 100vh;
+  width: 100vw;
+  top: 200vh;
+  /* margin-top: 76px; */
+  position: absolute;
+  z-index: -20;
+  background-color: rgb(247, 231, 244);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/*CSS for forms starts*/
+
+.form-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* min-height: 100vh; */
+}
+
+.weight {
+  margin-top: 15px;
+}
+
+.checkbox {
+  margin-top: 10px;
+}
+
+.form-holder .form-content {
+  position: relative;
+  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 60px;
+}
+
+.select-text {
+  left: 0px;
+  position: absolute;
+  text-align: left;
+}
+
+.form-content .form-items {
+  border: 3px solid #fff;
+  padding: 40px;
+  display: inline-block;
+  width: 100%;
+  min-width: 540px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  text-align: left;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.form-content h3 {
+  color: #fff;
+  text-align: left;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.form-content h3.form-title {
+  margin-bottom: 30px;
+}
+
+.form-content p {
+  color: #fff;
+  text-align: left;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+
+.form-content label,
+.was-validated .form-check-input:invalid ~ .form-check-label,
+.was-validated .form-check-input:valid ~ .form-check-label {
+  color: #fff;
+}
+
+.form-content input[type="text"],
+.form-content input[type="password"],
+.form-content input[type="email"],
+.form-content select {
+  width: 100%;
+  padding: 9px 20px;
+  text-align: left;
+  border: 0;
+  outline: 0;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+  color: #8d8d8d;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-top: 16px;
+}
+
+.btn-primary {
+  background-color: #6c757d;
+  outline: none;
+  border: 0px;
+  box-shadow: none;
+}
+
+.form-content textarea {
+  position: static !important;
+  width: 100%;
+  padding: 8px 20px;
+  border-radius: 6px;
+  text-align: left;
+  background-color: #fff;
+  border: 0;
+  font-size: 15px;
+  font-weight: 300;
+  color: #8d8d8d;
+  outline: none;
+  resize: none;
+  height: 120px;
+  -webkit-transition: none;
+  transition: none;
+  margin-bottom: 14px;
+}
+
+.form-content textarea:hover,
+.form-content textarea:focus {
+  border: 0;
+  background-color: #ebeff8;
+  color: #8d8d8d;
+}
+
+.mv-up {
+  margin-top: -9px !important;
+  margin-bottom: 8px !important;
+}
+
+.invalid-feedback {
+  color: #ff606e;
+}
+
+.valid-feedback {
+  color: #2acc80;
+}
+
+/*CSS for forms ends*/
+
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {
+} */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {
+} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {
+} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {
+} */
+
+/*For screens using a higher resolution*/
+/* @media (min-resolution: 120dpi) { */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media screen and (max-width: 2000px) {
+  .sec1 {
+    top: 0px;
+    height: 100vh;
+    /* position: aboslute; */
+    margin-top: 45px;
+    /* transform: scale(0.9); */
+  }
+
+  .sec2 {
+    /* transform: scale(0.9); */
+    height: 100vh;
+    top: 100vh;
+  }
+
+  .form-body {
+    transform: scale(0.8);
+    margin-top: -100px;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  /* .sec3 { */
+  /* width: 100%;
+    height: 90%;
+    top: -25px;
+    right: 0px; */
+  /* } */
+
+  .nutrition {
+    left: 1100px;
+    position: absolute;
+    top: 265px;
+  }
+
+  .currentItems {
+    top: 220px;
+  }
+
+  .food-header {
+    font-size: 50px;
+  }
+
+  .foodList {
+    left: -800px;
+    position: absolute;
+  }
+
+  /* .sec3 form-content textarea {
+    left: -500px;
+    position: absolute;
+  } */
+}
